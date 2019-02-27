@@ -1,0 +1,118 @@
+import turtle as tat
+tat.hideturtle()
+
+tat.speed(0)
+
+
+q_lado2 = tat.Turtle()
+q_lado2.hideturtle()
+q_lado2.penup()
+q_lado2.forward(170)
+q_lado2.left(90)
+q_lado2.forward(-50)
+q_lado2.pendown()  
+def crirardoisquadrados2(tl,ra):
+  q_lado2.fillcolor('green')
+  q_lado2.begin_fill()
+  for i in range(4):
+           q_lado2.forward(tl - 2*ra)
+           q_lado2.circle(ra, 90)
+  q_lado2.end_fill()      
+
+ 
+
+
+q_lado = tat.Turtle()
+q_lado.hideturtle()
+q_lado.penup()
+q_lado.forward(170)
+q_lado.left(90)
+q_lado.forward(70)
+q_lado.pendown()  
+def crirardoisquadrados(tl,ra):
+  for i in range(1):
+   q_lado.fillcolor('green')
+   q_lado.begin_fill()
+   for i in range(4):
+         q_lado.forward(tl - 2*ra)
+         q_lado.circle(ra, 90)
+   q_lado.end_fill()
+
+lado = tat.Turtle()
+lado.hideturtle()
+lado.speed(0)
+lado.penup()
+lado.forward(109)
+lado.left(90)
+lado.forward(60)
+lado.pendown()
+def quad_arredondado2(tl, ra):
+  for i in range(4):
+    lado.penup()
+    lado.forward(ra)
+    lado.pendown()
+    lado.fillcolor('green')
+    lado.begin_fill()
+    for i in range(4):
+        lado.forward(tl - 2*ra)
+        lado.circle(ra, 90)
+    lado.end_fill()
+    lado.penup()
+    lado.pendown()
+    lado.penup()
+    lado.backward(ra)
+    lado.pendown()
+    lado.penup()
+    lado.right(90)
+    lado.left(90)
+    lado.pendown()
+    lado.penup()
+    lado.backward(60)
+    lado.pendown()
+    
+    
+    
+
+luc = tat.Turtle()
+luc.speed(0)
+
+luc.hideturtle()
+def circulo(ra):
+  luc.penup()
+  luc.forward(50)
+  luc.left(90)
+  luc.forward(90)
+  luc.pendown()
+  luc.fillcolor('red')
+  luc.begin_fill()
+  luc.circle(ra)
+  luc.end_fill()
+def quad_arredondado(tl, ra):
+  for i in range(3):
+    tat.penup()
+    tat.forward(ra)
+    tat.pendown()
+    tat.fillcolor('green')
+    tat.begin_fill()
+    for i in range(3):
+     for i in range(4):
+        tat.forward(tl - 2*ra)
+        tat.circle(ra, 90)
+    
+    tat.end_fill()
+    tat.penup()
+    tat.backward(ra)
+    tat.pendown()
+    tat.penup()
+    tat.right(90)
+    tat.forward(60)
+    tat.left(90)
+    tat.pendown()
+
+
+
+  circulo(26)   
+  quad_arredondado(50,10)
+  quad_arredondado2(50,10)
+  crirardoisquadrados(50,10)
+  crirardoisquadrados2(50,10)
